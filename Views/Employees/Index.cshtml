@@ -1,0 +1,49 @@
+﻿@model List<BussinessEmployes.Models.Employee>
+
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Employee Details</h2>
+
+<p>
+    @Html.ActionLink(" Add New Employee", "Create")
+</p>
+
+<div class="Main_Content">
+
+    <table class="Employee_Data" cellpadding="20">
+        <tr class="boldborder">
+            <th>Id</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Company Name</th>
+            <th>City</th>
+            <th>Action</th>
+        </tr>
+
+        @foreach (var emp in Model)
+        {
+            <tr class="SqlData">
+                <td>@emp.Id</td>
+                <td>@emp.Name</td>
+                <td>@emp.Salary</td>
+                <td>@emp.Company</td>
+                <td>@emp.City</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = emp.Id })
+                    @Html.ActionLink("Delete", "Delete", new { id = emp.Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <script src="~/Scripts/custom.js"></script>
+
+</div>
+
+
+

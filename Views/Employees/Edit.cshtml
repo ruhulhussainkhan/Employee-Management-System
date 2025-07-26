@@ -1,0 +1,30 @@
+﻿@model BussinessEmployes.Models.Employee
+
+<link href="/Content/EditSheet.css" rel="stylesheet" />
+<h2> <span id="edit"> Edit Employee </span></h2>
+@using (Html.BeginForm())
+{
+<div class="text-area">
+    @Html.HiddenFor(m => m.Id)
+
+    <label>Name:</label>
+    @Html.TextBoxFor(m => m.Name)
+    <br />
+
+    <label>Salary:</label>
+    @Html.TextBoxFor(m => m.Salary)
+    <br />
+
+    <label>Company Name:</label>
+    @Html.TextBoxFor(m => m.Company)
+    <br />
+
+    <label>City:</label>
+    @Html.TextBoxFor(m => m.City)
+    <br />
+
+    <button id="savebutton" type="submit" value="Update" >Save</button>
+
+</div>
+}
+

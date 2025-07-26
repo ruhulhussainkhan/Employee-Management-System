@@ -1,0 +1,13 @@
+﻿@model BussinessEmployes.Models.Employee
+<link href="/Content/CreateStyle.css" rel="stylesheet" />
+<h2>Create Employee</h2>
+@using (Html.BeginForm())
+{
+    <label>Name:</label>
+    @Html.TextBoxFor(m => m.Name)
+    <br />
+    <label>Company:</label>
+    @Html.TextBoxFor(m => m.Company)
+    <br />
+    <input type="submit" value="Save" />
+}

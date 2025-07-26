@@ -1,0 +1,46 @@
+﻿@model BussinessEmployes.Models.Employee
+<link href="~/Content/CreateSheet.css" rel="stylesheet" />
+<h2 class="Main_Content"><span id="create">Create Employee</span></h2>
+@using (Html.BeginForm())
+{
+    <div class="text-area">
+        <label>Id:</label>
+        @Html.TextBoxFor(m => m.Id)
+        @Html.ValidationMessageFor(m => m.Id)
+
+        <br />
+
+        <label>Name:</label>
+        @Html.TextBoxFor(m => m.Name)
+        @Html.ValidationMessageFor(m => m.Name)
+
+        <br />
+
+        <label>Salary:</label>
+        @Html.TextBoxFor(m => m.Salary)
+        @Html.ValidationMessageFor(m => m.Salary)
+
+        <br />
+
+        <label>Company:</label>
+        @Html.TextBoxFor(m => m.Company)
+        @Html.ValidationMessageFor(m => m.Company)
+
+        <br />
+
+        <label>City:</label>
+        @Html.TextBoxFor(m => m.City)
+        @Html.ValidationMessageFor(m => m.City)
+
+        <br />
+
+        <button id="savebutton" type="submit" value="Save">Save</button>
+
+    </div>
+    
+}
+<script>
+    if () {
+        alert("Please Fill All The Details Correctly");
+    }
+</script>
